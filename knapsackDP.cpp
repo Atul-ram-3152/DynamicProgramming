@@ -16,7 +16,7 @@ int knapsack(int wt[], int val[], int capacity, int n)
     {
         return dp[n][capacity];
     }
-
+       
     if(wt[n-1] <= capacity)
     {
         dp[n][capacity] = max(val[n-1] + knapsack(wt, val, capacity-wt[n-1], n-1), knapsack(wt, val, capacity, n-1));
